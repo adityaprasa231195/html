@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Prasad | Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .content {
+            width: 50%;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #00ffff;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+        .skills {
+            margin-top: 20px;
+        }
+        .skills span {
+            background-color: #222;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-right: 10px;
+            color: #00ffff;
+            font-weight: bold;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        .buttons a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #00ffff;
+            color: #0a0a0a;
+            padding: 10px 20px;
+            margin: 10px 10px 0 0;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .buttons a:hover {
+            background-color: #00cccc;
+        }
+        .cube-container {
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 800px;
+        }
+        .cube {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            transform-style: preserve-3d;
+            transform: rotateX(51deg) rotateY(0deg);
+            animation: spin 6s infinite linear;
+        }
+        .cube div {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(0, 255, 255, 0.2);
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 20px #00ffff;
+        }
+        .front  { transform: translateZ(75px); }
+        .back   { transform: rotateY(180deg) translateZ(75px); }
+        .right  { transform: rotateY(90deg) translateZ(75px); }
+        .left   { transform: rotateY(-90deg) translateZ(75px); }
+        .top    { transform: rotateX(90deg) translateZ(75px); }
+        .bottom { transform: rotateX(-90deg) translateZ(75px); }
+
+        @keyframes spin {
+            from { transform: rotateX(51deg) rotateY(0deg); }
+            to { transform: rotateX(51deg) rotateY(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            body {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            .content, .cube-container {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            .buttons a {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            h1 {
+                font-size: 4em;
+            }
+            p {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Aditya Prasad</h1>
+        <p>Hello! I'm Aditya, a passionate programmer skilled in problem-solving , software development and system programming . I enjoy working with data, building efficient systems, and exploring the world of programming.</p>
+        <div class="skills">
+            <span>C++</span>
+            <span>SQL</span>
+            <span>Python</span>
+        </div>
+        <div class="buttons">
+            <a href="https://github.com/adityaprasa231195" target="_blank">GitHub</a>
+            <a href="https://leetcode.com/u/adityaprasad00/" target="_blank">LeetCode</a>
+            <a href="https://x.com/adityaprasd4525" target="_blank">Twitter</a>
+            <a href="https://codeforces.com/profile/adityaharishankarprasad" target="_blank">Codeforces</a>
+        </div>
+    </div>
+    <div class="cube-container">
+        <div class="cube">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+</body>
+</html>
